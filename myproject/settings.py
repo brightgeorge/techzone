@@ -90,14 +90,14 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'hbct',
         'USER': 'root',
-        #'PASSWORD': '#123.com#',
-        'PASSWORD': '',
+        'PASSWORD': '#123.com#',
+        #'PASSWORD': '',
         'HOST': 'localhost',
 
     }
 }
 
-
+#
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
