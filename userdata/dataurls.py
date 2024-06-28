@@ -10,6 +10,10 @@ urlpatterns = [
 
     path('upload_image/',data.upload_image,name='upload_image'),
     path('profile_image_regi/',data.profile_image_regi,name='profile_image_regi'),
+    path('update_profile_image/<id>',data.update_profile_image,name='update_profile_image'),
+    path('update_profile_image_background/<id>',data.update_profile_image_background,name='update_profile_image_background'),
+
+    path('qrcode/<id>',data.qrcode,name='qrcode'),
 
 
     ]

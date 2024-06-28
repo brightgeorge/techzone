@@ -20,6 +20,7 @@ class profile(models.Model):
     our_services = models.CharField(max_length=250)
 
     profile_image = models.ImageField(upload_to='images/')
+    profile_image_back = models.ImageField(upload_to='background/')
 
 
 class client_services(models.Model):
