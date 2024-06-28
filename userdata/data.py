@@ -282,3 +282,8 @@ def qrcode(request,id):
         context['variable'] = qr_text
         context['msg'] = x
     return render(request, 'admindashboard/control_panel/qrcode.html', context=context)
+
+
+
+
+##############
