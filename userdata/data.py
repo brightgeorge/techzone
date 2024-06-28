@@ -266,7 +266,7 @@ def qrcode(request,id):
         qr_text = request.POST.get("qr_text", "")
         #qr_image = qrcode.make(qr_text,box_size=15)
         data = 'QR Code using make() function'
-        m='http://127.0.0.1:8000/user_dashboard_old/'
+        m='http://54.252.251.143:8000/user_dashboard_old/'
         n=id
         x=m+n
 
