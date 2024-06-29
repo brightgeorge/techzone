@@ -126,13 +126,10 @@ def admin_dashboard(request):
 
 
 def user_dashboard_old(request,id):
-    us = request.session['username']
 
     context = {
-        'name': us,
         'pro': profile.objects.all().filter(id=id),
         'sd' : profile.objects.all().get(id=id)
-
     }
     return render (request,'user/userindex.html',context)
 
