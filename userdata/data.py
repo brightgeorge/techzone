@@ -14,14 +14,12 @@ from userdata.models import *
 
 
 def view_all_profiles(request):
-    if 'username' in request.session:
-        #vu=profile.objects.filter(user_flage=1)
-        vu = profile.objects.all()
-        context={
-            'users':vu
-        }
-        return render(request,'admindashboard/control_panel/view_all_profiles.html',context)
-    return render(request,'index.html')
+    #vu=profile.objects.filter(user_flage=1)
+    vu = profile.objects.all()
+    context={
+        'users':vu
+    }
+    return render(request,'admindashboard/control_panel/view_all_profiles.html',context)
 
 def add_new_user_details(request):
     return render(request,'admindashboard/control_panel/add_new_user_details.html')
