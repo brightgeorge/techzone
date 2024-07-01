@@ -16,9 +16,8 @@ from userdata.models import *
 def view_all_profiles(request):
     if 'username' in request.session:
         #vu=profile.objects.filter(user_flage=1)
-        vu = profile.objects.all()
         context={
-            'users':vu
+            'users':profile.objects.all()
         }
         return render(request,'admindashboard/control_panel/view_all_profiles.html',context)
     return render(request,'index.html')

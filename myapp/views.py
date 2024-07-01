@@ -45,6 +45,7 @@ def login_request(request):
                     'yy':ul,
                     'active_user':ltuel,
                     'total_disableusers':ltudl,
+                    'users': profile.objects.all(),
                 }
                 return render(request,'admindashboard/adminindex.html',context)
 
@@ -119,6 +120,8 @@ def admin_dashboard(request):
         'yy': ul,
         'active_user': ltuel,
         'total_disableusers': ltudl,
+
+        'users': profile.objects.all(),
 
 
     }
