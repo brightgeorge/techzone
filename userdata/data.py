@@ -291,8 +291,8 @@ def getfile(request,id):
     response['Content-Disposition'] = 'attachment; filename="file.vcf"'
     employees = profile.objects.all().filter(id=id)
     writer = csv.writer(response)
-    for employee in employees:
-        writer.writerow([employee.name,employee.mob,employee.email])
+    for i in employees:
+        writer.writerow(['BEGIN:VCARD','VERSION:3.0','TEL;type=Work:'+ i.mob,'END:VCARD'])
     return response
 
 
