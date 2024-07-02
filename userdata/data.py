@@ -288,7 +288,7 @@ def qrcode(request,id):
 import csv
 def getfile(request,id):
     response = HttpResponse(content_type='text/csv')
-    response['Content-Disposition'] = 'attachment; filename="file.csv"'
+    response['Content-Disposition'] = 'attachment; filename="file.vcf"'
     employees = profile.objects.all().filter(id=id)
     writer = csv.writer(response)
     for employee in employees:
