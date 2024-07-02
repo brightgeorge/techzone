@@ -149,6 +149,8 @@
 				  <a href="mailto:{{i.email}}"> <i class="fa fa-envelope bg-twitter text-white">  </i> Email </a>
 				  <a href="{{i.location}}"> <i class="fa fa-map-marker bg-google-plus text-white">  </i> Location </a>
 
+                    <a href="{% url 'getfile' id=i.id %}"> <i class="fa fa-map-marker bg-google-plus text-white">  </i> save </a>
+
 
                     {% endfor %}
                 </div>
