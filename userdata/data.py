@@ -4,6 +4,7 @@ from io import BytesIO
 import base64
 from PIL import Image
 import qrcode
+from django.http import HttpResponse
 
 from django.shortcuts import render
 from django.contrib import messages
@@ -281,6 +282,18 @@ def qrcode(request,id):
         context['variable'] = qr_text
         context['msg'] = x
     return render(request, 'admindashboard/control_panel/qrcode.html', context=context)
+
+
+
+import csv
+def getfile(request):
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="file.csv"'
+    employees = profile.objects.all().filter(id=16)
+    writer = csv.writer(response)
+    for employee in employees:
+        writer.writerow([employee.name,employee.mob,employee.email])
+    return response
 
 
 

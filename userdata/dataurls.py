@@ -14,6 +14,7 @@ urlpatterns = [
     path('update_profile_image_background/<id>',data.update_profile_image_background,name='update_profile_image_background'),
 
     path('qrcode/<id>',data.qrcode,name='qrcode'),
+    path('getfile/',data.getfile,name='getfile'),
 
 
     ]
