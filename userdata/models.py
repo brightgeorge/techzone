@@ -16,6 +16,18 @@ class profile(models.Model):
     linkedin_endis = models.CharField(max_length=250)
     twitter = models.CharField(max_length=250)
     twitter_endis = models.CharField(max_length=250)
+
+
+    whatsapp = models.CharField(max_length=250)
+    whatsapp_endis = models.CharField(max_length=250)
+    youtube = models.CharField(max_length=250)
+    youtube_endis = models.CharField(max_length=250)
+    google = models.CharField(max_length=250)
+    google_endis = models.CharField(max_length=250)
+    telegram = models.CharField(max_length=250)
+    telegram_endis = models.CharField(max_length=250)
+
+
     prof_details = models.TextField()
     our_services = models.CharField(max_length=250)
 

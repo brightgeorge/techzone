@@ -48,6 +48,15 @@ def add_new_user_details_regi(request):
         twitter = request.POST.get('twitter')
         twittendis = request.POST.get('twitter_endis')
 
+        whatsapp = request.POST.get('what')
+        whatsapp_endis = request.POST.get('what_endis')
+        youtube = request.POST.get('youtube')
+        youtube_endis = request.POST.get('youtube_endis')
+        google = request.POST.get('google')
+        google_endis = request.POST.get('google_endis')
+        telegram = request.POST.get('telegram')
+        telegram_endis = request.POST.get('telegram_endis')
+
         img = request.FILES['image']
         imgback = request.FILES['imagebackground']
 
@@ -71,6 +80,16 @@ def add_new_user_details_regi(request):
 
         uc.twitter = twitter
         uc.twitter_endis = twittendis
+
+        uc.whatsapp = whatsapp
+        uc.whatsapp_endis = whatsapp_endis
+        uc.youtube = youtube
+        uc.youtube_endis = youtube_endis
+        uc.google = google
+        uc.google_endis = google_endis
+        uc.telegram = telegram
+        uc.telegram_endis = telegram_endis
+
 
         uc.profile_image = img
         uc.profile_image_back = imgback
@@ -104,6 +123,17 @@ def update_profile(request,id):
 
         twitter = request.POST.get('twitter')
         twittendis = request.POST.get('twitter_endis')
+
+
+
+        whatsapp = request.POST.get('what')
+        whatsapp_endis = request.POST.get('what_endis')
+        youtube = request.POST.get('youtube')
+        youtube_endis = request.POST.get('youtube_endis')
+        google = request.POST.get('google')
+        google_endis = request.POST.get('google_endis')
+        telegram = request.POST.get('telegram')
+        telegram_endis = request.POST.get('telegram_endis')
 
         #img = request.FILES['image']
 
@@ -139,6 +169,17 @@ def update_profile(request,id):
 
         uc.twitter = twitter
         uc.twitter_endis = twittendis
+
+
+
+        uc.whatsapp = whatsapp
+        uc.whatsapp_endis = whatsapp_endis
+        uc.youtube = youtube
+        uc.youtube_endis = youtube_endis
+        uc.google = google
+        uc.google_endis = google_endis
+        uc.telegram = telegram
+        uc.telegram_endis = telegram_endis
 
         #print('this is my image',img)
 
@@ -288,11 +329,13 @@ def qrcode(request,id):
 import csv
 def getfile(request,id):
     response = HttpResponse(content_type='text/csv')
-    response['Content-Disposition'] = 'attachment; filename="file.vcf"'
+    response['Content-Disposition'] = 'attachment; filename="ramu.vcf"'
     employees = profile.objects.all().filter(id=id)
     writer = csv.writer(response)
+    a='BEGIN:VCARD\nVERSION:3.0\nN:;Adv . Latha . K;;;\nFN:Adv . Latha . K\nORG:\nTITLE:Advocate\nTEL;type=Work:+919447131783\nitem1.URL:https://nearfield.me/AdvLathak\nitem1.X-ABLabel:OTHER\nEND:VCARD'
+    x=10
     for i in employees:
-        writer.writerow(['BEGIN:VCARD','VERSION:3.0','TEL;type=Work:'+ i.mob,'END:VCARD'])
+        writer.writerow([i.prof])
     return response
 
 
