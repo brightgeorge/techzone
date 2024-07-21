@@ -27,6 +27,10 @@ class profile(models.Model):
     telegram = models.CharField(max_length=250)
     telegram_endis = models.CharField(max_length=250)
 
+    genaral_link_name = models.CharField(max_length=250)
+    genaral_link = models.CharField(max_length=250)
+    genaral_link_endis = models.CharField(max_length=250)
+
 
     prof_details = models.TextField()
     our_services = models.CharField(max_length=250)

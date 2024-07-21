@@ -283,7 +283,7 @@
 
                   <div class="media align-items-center">
                    <div><img src="
-                  https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnp6LW9NgnY7HfEsBOP9jokNiPB7YAiwi_6g&s"
+                  {% static 'admindashboard/assets/images/youtube.png' %}"
                              class="skill-img" alt="skill img"></div>
                      <div class="media-body text-left ml-3">
                        <div class="progress-wrapper">
@@ -313,7 +313,7 @@
                              class="skill-img" alt="skill img"></div>
                      <div class="media-body text-left ml-3">
                        <div class="progress-wrapper">
-                         <p>WhatsApp <span class="float-right">  </span></p>
+                         <p>Google <span class="float-right">  </span></p>
                          <div class="progress" style="height: 5px;">
                           <div class="progress-bar" style="width:100%"></div>
                          </div>
@@ -338,7 +338,7 @@
                              class="skill-img" alt="skill img"></div>
                      <div class="media-body text-left ml-3">
                        <div class="progress-wrapper">
-                         <p>WhatsApp <span class="float-right">  </span></p>
+                         <p>Telegram <span class="float-right">  </span></p>
                          <div class="progress" style="height: 5px;">
                           <div class="progress-bar" style="width:100%"></div>
                          </div>
@@ -349,6 +349,38 @@
 
                 {% endif %}
                 {% endfor %}
+
+
+
+
+
+
+
+                {% for i in pro %}
+                {% if i.genaral_link_endis == '1' %}
+
+                  <div class="media align-items-center">
+                   <div><img src="
+                   data:image/png;base64,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"
+                             class="skill-img" alt="skill img"></div>
+                     <div class="media-body text-left ml-3">
+                       <div class="progress-wrapper">
+                         <p>"{{i.genaral_link_name}}" <span class="float-right">  </span></p>
+                           <input type="text" value="{{i.genaral_link}}">
+
+                         <!-- <div class="progress" style="height: 5px;">
+                         <div class="progress-bar" style="width:100%"></div>
+                         </div> -->
+                        </div>
+                    </div>
+                  </div><hr>
+
+
+                {% endif %}
+                {% endfor %}
+
+
+
 
 
 

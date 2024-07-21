@@ -57,6 +57,10 @@ def add_new_user_details_regi(request):
         telegram = request.POST.get('telegram')
         telegram_endis = request.POST.get('telegram_endis')
 
+        general_link_head_1 = request.POST.get('general_link_head_1')
+        general_link = request.POST.get('general_link')
+        general_link_endis = request.POST.get('general_link_endis')
+
         img = request.FILES['image']
         imgback = request.FILES['imagebackground']
 
@@ -89,6 +93,10 @@ def add_new_user_details_regi(request):
         uc.google_endis = google_endis
         uc.telegram = telegram
         uc.telegram_endis = telegram_endis
+
+        uc.genaral_link_name = general_link_head_1
+        uc.genaral_link = general_link
+        uc.genaral_link_endis = general_link_endis
 
 
         uc.profile_image = img
@@ -135,6 +143,10 @@ def update_profile(request,id):
         telegram = request.POST.get('telegram')
         telegram_endis = request.POST.get('telegram_endis')
 
+        general_link_head_1 = request.POST.get('general_link_head_1')
+        general_link = request.POST.get('genaral_link')
+        general_link_endis = request.POST.get('general_link_endis')
+
         #img = request.FILES['image']
 
 
@@ -180,6 +192,10 @@ def update_profile(request,id):
         uc.google_endis = google_endis
         uc.telegram = telegram
         uc.telegram_endis = telegram_endis
+
+        uc.genaral_link_name = general_link_head_1
+        uc.genaral_link = general_link
+        uc.genaral_link_endis = general_link_endis
 
         #print('this is my image',img)
 
