@@ -305,6 +305,27 @@ def update_profile_image_background(request,id):
     return render(request, 'admindashboard/control_panel/update_profile_image_background.html',context)
 
 
+def update_pdf(request,id):
+    if request.method == 'POST':
+        img = request.FILES['uppdf']
+
+        uc = profile.objects.get(id=id)
+
+        prod = profile.objects.get(id=id)
+        if len(prod.brochure)>0:
+            os.remove(prod.brochure.path)
+            uc.brochure = img
+        uc.save()
+
+        messages.info(request, 'update pdf sucessfully')
+        return view_all_profiles(request)
+
+    context = {
+        'sd' : profile.objects.all().get(id=id),
+    }
+
+    return render(request, 'admindashboard/control_panel/updatepdf.html',context)
+
 
 
 

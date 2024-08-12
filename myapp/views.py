@@ -133,6 +133,7 @@ def user_dashboard_old(request,id):
     import socket
     hostname = socket.gethostname()
     IPAddr = socket.gethostbyname(hostname)
+    #IPAddrl=['127.0.0.1']
     IPAddrl=['54.252.251.143']
     #IPAddrl.append(IPAddr)
 
@@ -152,10 +153,6 @@ def user_dashboard_old(request,id):
     aa=[]
     aa.append(ht[0]+IPAddrl[0]+hos[0]+al[0]+alb[0])
     print('aa',aa)
-
-    # Python Program to Get IP Address
-
-    print("Your Computer IP Address is:", IPAddrl)
 
     context = {
         'pro': profile.objects.all().filter(id=id),

@@ -16,5 +16,7 @@ urlpatterns = [
     path('qrcode/<id>',data.qrcode,name='qrcode'),
     path('getfile/<id>',data.getfile,name='getfile'),
 
+    path('update_pdf/<id>',data.update_pdf,name='update_pdf'),
+
 
     ]

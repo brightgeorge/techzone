@@ -255,12 +255,13 @@
               <i class="icon-options1" style="background-color:red;border:1px solid green;">manage</i>
              </a>
               <div class="dropdown-menu dropdown-menu-right">
-                  <a class="dropdown-item" href="{% url 'user_dashboard_old' id=i.id %}">View Current Profile</a>
+                  <a class="dropdown-item" href="{% url 'user_dashboard_old' id=i.id %}">View Current Profile 1</a>
                   <a class="dropdown-item" href="{% url 'update_profile' id=i.id %}">Update Current Profile</a>
                   <a class="dropdown-item" href="{% url 'update_profile_image' id=i.id %}">Update Profile Image</a>
                   <a class="dropdown-item" href="{% url 'update_profile_image_background' id=i.id %}">Update Background Image</a>
+                  <a class="dropdown-item" href="{% url 'update_pdf' id=i.id %}">Update PDF </a>
                    <a class="dropdown-item" href="{% url 'qrcode' id=i.id %}"> Qrcode </a>
-                <a class="dropdown-item" href="{% url 'delete_user' id=i.id %}">Delete Current Profile</a>
+                <a class="dropdown-item" href="{% url 'update_pdf' id=i.id %}">Delete Current Profile</a>
 
                </div>
               </div></td>
