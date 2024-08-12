@@ -491,7 +491,88 @@
 
 
 
+                                <div class="form-group">
 
+				<label for="input-4" class="col-lg-3"> Genaral Link Name 2 </label>
+				<input type="text" class="form-control col-lg-2" id="input-4" value="{{sd.genaral_link_name}}" style="display:inline;" name="general_link_head_12" required>
+
+				<label for="input-4" class="col-lg-2"></label>
+<!--
+				<label for="role" class="col-lg-2">Status</label>
+				<select id="role" class="col-lg-2 form-control" style="display:inline;" name="general_link_head_1_endis" required>
+					<option style="background-color:white;" value="0">Select</option>
+					<option value="1" >Enable</option>
+					<option value="0" >Disable</option>
+
+				</select>
+-->
+			</div>
+
+
+
+        <div class="form-group">
+				<label for="input-4" class="col-lg-3">Genaral Link</label>
+				<input type="text" class="form-control col-lg-2" id="input-4" value="{{sd.genaral_link}}" style="display:inline;" name="genaral_link2" required>
+
+				<label for="input-4" class="col-lg-2"></label>
+
+				<label for="role" class="col-lg-2">Status</label>
+				<select id="role" class="col-lg-2 form-control" style="display:inline;" name="general_link_endis2" required>
+					{% if sd.genaral_link_endis2 == '1' %}
+					<option style="background-color:white;" value="{{sd.genaral_link_endis}}">Enabled</option>
+                    {% else %}
+                    <option style="background-color:white;" value="{{sd.genaral_link_endis}}">Disabled</option>
+                    {% endif %}
+					<option value="1" >Enable</option>
+					<option value="0" >Disable</option>
+
+				</select>
+
+			</div>
+
+
+
+
+
+
+                                <div class="form-group">
+
+				<label for="input-4" class="col-lg-3"> Genaral Link Name 3 </label>
+				<input type="text" class="form-control col-lg-2" id="input-4" value="{{sd.genaral_link_name}}" style="display:inline;" name="general_link_head_13" required>
+
+				<label for="input-4" class="col-lg-2"></label>
+<!--
+				<label for="role" class="col-lg-2">Status</label>
+				<select id="role" class="col-lg-2 form-control" style="display:inline;" name="general_link_head_1_endis" required>
+					<option style="background-color:white;" value="0">Select</option>
+					<option value="1" >Enable</option>
+					<option value="0" >Disable</option>
+
+				</select>
+-->
+			</div>
+
+
+
+                <div class="form-group">
+				<label for="input-4" class="col-lg-3">Genaral Link</label>
+				<input type="text" class="form-control col-lg-2" id="input-4" value="{{sd.genaral_link}}" style="display:inline;" name="genaral_link3" required>
+
+				<label for="input-4" class="col-lg-2"></label>
+
+				<label for="role" class="col-lg-2">Status</label>
+				<select id="role" class="col-lg-2 form-control" style="display:inline;" name="general_link_endis3" required>
+					{% if sd.genaral_link_endis3 == '1' %}
+					<option style="background-color:white;" value="{{sd.genaral_link_endis}}">Enabled</option>
+                    {% else %}
+                    <option style="background-color:white;" value="{{sd.genaral_link_endis}}">Disabled</option>
+                    {% endif %}
+					<option value="1" >Enable</option>
+					<option value="0" >Disable</option>
+
+				</select>
+
+			</div>
 
 
 

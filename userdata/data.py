@@ -61,8 +61,17 @@ def add_new_user_details_regi(request):
         general_link = request.POST.get('general_link')
         general_link_endis = request.POST.get('general_link_endis')
 
+        general_link_head_12 = request.POST.get('general_link_head_12')
+        general_link2 = request.POST.get('general_link2')
+        general_link_endis2 = request.POST.get('general_link_endis2')
+
+        general_link_head_13 = request.POST.get('general_link_head_13')
+        general_link3 = request.POST.get('general_link3')
+        general_link_endis3 = request.POST.get('general_link_endis3')
+
         img = request.FILES['image']
         imgback = request.FILES['imagebackground']
+        broch = request.FILES['broch']
 
         uc = profile()
         uc.name = name
@@ -98,9 +107,18 @@ def add_new_user_details_regi(request):
         uc.genaral_link = general_link
         uc.genaral_link_endis = general_link_endis
 
+        uc.genaral_link_name2 = general_link_head_12
+        uc.genaral_link2 = general_link2
+        uc.genaral_link_endis2 = general_link_endis2
+
+        uc.genaral_link_name3 = general_link_head_13
+        uc.genaral_link3 = general_link3
+        uc.genaral_link_endis3 = general_link_endis3
+
 
         uc.profile_image = img
         uc.profile_image_back = imgback
+        uc.brochure = broch
 
         #uc.user_flage = chk
         uc.save()
@@ -146,6 +164,14 @@ def update_profile(request,id):
         general_link_head_1 = request.POST.get('general_link_head_1')
         general_link = request.POST.get('genaral_link')
         general_link_endis = request.POST.get('general_link_endis')
+
+        general_link_head_12 = request.POST.get('general_link_head_12')
+        general_link2 = request.POST.get('genaral_link2')
+        general_link_endis2 = request.POST.get('general_link_endis2')
+
+        general_link_head_13 = request.POST.get('general_link_head_13')
+        general_link3 = request.POST.get('genaral_link3')
+        general_link_endis3 = request.POST.get('general_link_endis3')
 
         #img = request.FILES['image']
 
@@ -196,6 +222,14 @@ def update_profile(request,id):
         uc.genaral_link_name = general_link_head_1
         uc.genaral_link = general_link
         uc.genaral_link_endis = general_link_endis
+
+        uc.genaral_link_name2 = general_link_head_12
+        uc.genaral_link2 = general_link2
+        uc.genaral_link_endis2 = general_link_endis2
+
+        uc.genaral_link_name3 = general_link_head_13
+        uc.genaral_link3 = general_link3
+        uc.genaral_link_endis3 = general_link_endis3
 
         #print('this is my image',img)
 

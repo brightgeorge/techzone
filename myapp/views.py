@@ -129,10 +129,39 @@ def admin_dashboard(request):
 
 
 def user_dashboard_old(request,id):
+    ht=['http://']
+    import socket
+    hostname = socket.gethostname()
+    IPAddr = socket.gethostbyname(hostname)
+    IPAddrl=[]
+    IPAddrl.append(IPAddr)
+
+    hos=[':8000']
+
+
+    a = profile.objects.all().filter(id=id)
+    al=['/static/']
+    print('all',al)
+    alb=[]
+    print('alb',alb)
+    for i in a:
+        pass
+        alb.append(str(i.brochure))
+
+    print('alb', alb)
+    aa=[]
+    aa.append(ht[0]+IPAddrl[0]+hos[0]+al[0]+alb[0])
+    print('aa',aa)
+
+    # Python Program to Get IP Address
+
+    print("Your Computer IP Address is:", IPAddrl)
 
     context = {
         'pro': profile.objects.all().filter(id=id),
-        'sd' : profile.objects.all().get(id=id)
+        'sd' : profile.objects.all().get(id=id),
+        'bro' : al[0],
+        'aa' : aa[0],
     }
     return render (request,'user/userindex.html',context)
 
