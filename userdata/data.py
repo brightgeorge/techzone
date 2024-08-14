@@ -312,9 +312,11 @@ def update_pdf(request,id):
         uc = profile.objects.get(id=id)
 
         prod = profile.objects.get(id=id)
-        if len(prod.brochure)>0:
+
+        if len(prod.brochure) > 0:
             os.remove(prod.brochure.path)
             uc.brochure = img
+
         uc.save()
 
         messages.info(request, 'update pdf sucessfully')
