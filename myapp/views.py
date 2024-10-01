@@ -133,8 +133,9 @@ def user_dashboard_old(request,id):
     import socket
     hostname = socket.gethostname()
     IPAddr = socket.gethostbyname(hostname)
-    IPAddrl=['127.0.0.1']
-    #IPAddrl=['54.252.251.143']
+    #IPAddrl=['127.0.0.1']
+    IPAddrl=['54.252.251.143']
+
     #IPAddrl.append(IPAddr)
 
     hos=[':8000']
